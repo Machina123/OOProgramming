@@ -17,6 +17,7 @@ ComplexNumber::ComplexNumber( int m , int n ) {
     Im = n ;
 }
 
+// Przeciążanie operatora dodawania jako metoda klasy
 ComplexNumber ComplexNumber::operator+(ComplexNumber z0 ) {
     int _Re, _Im;
     _Re = Re + z0.Re ;
@@ -24,6 +25,7 @@ ComplexNumber ComplexNumber::operator+(ComplexNumber z0 ) {
     return ComplexNumber( _Re , _Im ) ;
 }
 
+// Przeciążanie opertora odejmowania z wykorzystaniem funkcji zaprzyjaźnionej
 ComplexNumber operator- (ComplexNumber z1, ComplexNumber z2) {
     ComplexNumber z3(0,0);
     z3.Re = z1.Re - z2.Re;
